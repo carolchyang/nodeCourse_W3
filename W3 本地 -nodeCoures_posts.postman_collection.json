@@ -1,0 +1,118 @@
+{
+  "info": {
+    "_postman_id": "34ed6780-fe7a-4424-886f-8260da356855",
+    "name": "W3 本地 -nodeCoures_posts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9557023"
+  },
+  "item": [
+    {
+      "name": "取得所有貼文",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/posts",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "取得單一貼文",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/post/628e7909933f1c7ccb319519",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["post", "628e7909933f1c7ccb319519"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增貼文",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"貼文名稱\",\r\n    \"tags\": \"電影3\",\r\n    \"type\": \"group\",\r\n    \"image\": \"https://images.unsplash.com/photo-1653380399372-4cfa7cfcfab9\",\r\n    \"content\": \"貼文內容\",\r\n    \"likes\": 0,\r\n    \"comments\": 100 \r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/post",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["post"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "修改貼文",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"修改貼文名稱\",\r\n    \"tags\": \"電影\",\r\n    \"type\": \"group\",\r\n    \"image\": \"https://images.unsplash.com/photo-1653380399372-4cfa7cfcfab9\",\r\n    \"content\": \"貼文內容\",\r\n    \"likes\": 0,\r\n    \"comments\": 100 \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/post/628e79efcdea69d0772f8642",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["post", "628e79efcdea69d0772f8642"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除單一貼文",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/post/628e79dacdea69d0772f863f",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["post", "628e79dacdea69d0772f863f"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除全部貼文",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/posts",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
